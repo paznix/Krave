@@ -10,6 +10,8 @@ module.exports = {
       dgreen: '#18a86b',
       white: '#FFFFFF',
       grey: '#D8D8D8',
+      gray: '#E8E8E8',
+
     },
     extend: {},
   },
