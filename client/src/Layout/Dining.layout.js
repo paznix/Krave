@@ -9,6 +9,7 @@ const DiningLayout = (props) => {
             <Navbar/>
             <Speedbar/>
             {props.children}
+            <h1>Dining</h1>
         </div>
         </>
     );

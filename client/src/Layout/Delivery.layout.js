@@ -9,6 +9,7 @@ const DeliveryLayout = (props) => {
             <Navbar/>
             <Speedbar/>
             {props.children}
+            <h1>Delivery</h1>
         </div>
         </>
     );

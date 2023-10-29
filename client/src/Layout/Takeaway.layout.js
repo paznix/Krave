@@ -9,6 +9,7 @@ const TakeawayLayout = (props) => {
             <Navbar/>
             <Speedbar/>
             {props.children}
+            <h1>Takeaway</h1>
         </div>
         </>
     );
