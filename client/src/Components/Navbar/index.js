@@ -61,8 +61,8 @@ const LargeNav = () => {
 const Navbar = () => {
   return (
     <>
-      <nav className="bg-back mt-2 shadow-lg rounded-2xl md:rounded-3xl items-center">
-        <div className=" md:hidden">
+      <nav className="bg-back mt-3 shadow-lg rounded-2xl md:rounded-3xl items-center z-10">
+        <div className="md:hidden">
           {/* Mobile View */}
           <MobileNav />
         </div>
