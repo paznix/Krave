@@ -3,6 +3,7 @@ import React from "react";
 //Components
 import Navbar from "../Components/Navbar";
 import Speedbar from "../Components/Speedbar";
+import Delivery from "../Components/Delivery/Delivery";
 
 const HomeLayout = (props) => {
   return (
@@ -11,6 +12,7 @@ const HomeLayout = (props) => {
         <Navbar/>
         <Speedbar/>
         {props.children}
+        <Delivery/>
         </div>
     </>
   );

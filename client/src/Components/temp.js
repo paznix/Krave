@@ -1,7 +1,7 @@
 import React from "react";
 
 const Temp = () => {
-    return <div>Hello World!</div>  
+    return <div className="mt-5"></div>  
 };
 
 export default Temp;

@@ -1,6 +1,7 @@
 import React, { Children } from 'react';
 import Navbar from '../Components/Navbar';
 import Speedbar from '../Components/Speedbar';
+import TakeawayRender from '../Components/OtherTabs/Takeaway/TakeawayRender';
 
 const TakeawayLayout = (props) => {
     return(
@@ -9,7 +10,7 @@ const TakeawayLayout = (props) => {
             <Navbar/>
             <Speedbar/>
             {props.children}
-            <h1>Takeaway</h1>
+            <TakeawayRender/>
         </div>
         </>
     );

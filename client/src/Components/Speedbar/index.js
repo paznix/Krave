@@ -8,14 +8,14 @@ const MobileSpeedbar = () => {
   return (
     <>
       <div className=" fixed bottom-3 flex items-center gap-6 justify-around bg-back rounded-2xl shadow-md py-2 px-4">
-        <NavLink to="/delivery">
+        <NavLink to="/">
           {({ isActive }) => (
             <div
               className="bg-back px-3 flex flex-col justify-between items-center w-full"
               style={{
                 filter: isActive ? "gray" : "none",
                 WebkitFilter: isActive ? "grayscale(0)" : "grayscale(.9)",
-              }}
+              }}            
             >
               <img src={DeliveryImg} className="w-9" />
               <span className="font-bold text-lgreen text-sm">Delivery</span>
@@ -60,7 +60,7 @@ const LargeSpeedbar = () => {
     <>
       <div className="flex flex-col w-full mt-4">
         <div className="flex gap-1">
-          <NavLink to="/delivery">
+          <NavLink to="/">
             {({ isActive }) => (
               <div
                 className="bg-back rounded-t-2xl px-3 flex justify-between items-center w-full"

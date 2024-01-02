@@ -1,6 +1,7 @@
-import React, { Children } from 'react';
+import React from 'react';
 import Navbar from '../Components/Navbar';
 import Speedbar from '../Components/Speedbar';
+import DiningRender from '../Components/OtherTabs/Dining/DiningRender';
 
 const DiningLayout = (props) => {
     return(
@@ -9,7 +10,7 @@ const DiningLayout = (props) => {
             <Navbar/>
             <Speedbar/>
             {props.children}
-            <h1>Dining</h1>
+            <DiningRender/>
         </div>
         </>
     );

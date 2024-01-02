@@ -3,6 +3,7 @@ import Krave from "../../assets/krave.png";
 import { FiSearch } from "react-icons/fi";
 import { ImLocation } from "react-icons/im";
 import { RxDividerVertical } from "react-icons/rx";
+import { Link } from "react-router-dom";
 
 const MobileNav = () => {
   return (
@@ -27,7 +28,10 @@ const LargeNav = () => {
     <>
       <div className="md:rounded-3xl flex justify-between w-full items-center">
         <div className="mr-2">
-          <img src={Krave} alt="logo" className="h-16" />
+          <a href="/">
+            <img src={Krave} alt="logo" className="h-16 " />
+          </a>
+          
         </div>
 
 
