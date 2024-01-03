@@ -37,7 +37,7 @@ const Foods = () => {
   const renderCat = (card) => {
     return (
       <>
-        <div className="bg-white rounded-2xl shadow">
+        <div className="bg-white rounded-2xl shadow hover:cursor-pointer">
           <div className="w-28 h-24 md:w-44 md:h-32">
             <img
               src={card.image}
