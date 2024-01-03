@@ -5,7 +5,7 @@ const diningCards = () => {
     const renderCards = (card) => {
         return (
             <>
-            <div>
+        
                 <div className="mx-auto flex flex-col  bg-white rounded-xl shadow-md md:shadow-xl md:w-96">
                 <div className="">
                     <img src={card.image} alt={card.name} className="w-96 h-56 rounded-t-xl"/>
@@ -21,7 +21,7 @@ const diningCards = () => {
                     
                 </div>
             </div>
-            </div>
+        
                 
             </>
         );

@@ -5,8 +5,8 @@ const takeawayCards = () => {
     const renderCards = (card) => {
         return (
             <>
-            <div>
-                <div className="mx-auto flex flex-col  bg-white rounded-xl shadow-md md:shadow-xl md:w-96">
+            
+                <div className=" mx-auto flex flex-col  bg-white rounded-xl shadow-md md:shadow-xl md:w-96">
                 <div className="">
                     <img src={card.image} alt={card.name} className="w-96 h-56 rounded-t-xl"/>
                 </div>
@@ -21,7 +21,7 @@ const takeawayCards = () => {
                     
                 </div>
             </div>
-            </div>
+        
                 
             </>
         );
