@@ -1,11 +1,41 @@
-import React from "react";
+import React , { useEffect , useState} from "react";
 import Krave from "../../assets/krave.png";
 import { FiSearch } from "react-icons/fi";
 import { ImLocation } from "react-icons/im";
 import { RxDividerVertical } from "react-icons/rx";
-import { Link } from "react-router-dom";
+import { Link , useNavigate } from "react-router-dom";
+
+
+
 
 const MobileNav = () => {
+  const navigate = useNavigate();
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    const handleLogout = () => {
+        sessionStorage.removeItem('Auth token');
+        sessionStorage.removeItem('User Id');
+        window.dispatchEvent(new Event("storage"))
+        navigate("/");
+    }
+
+    useEffect(() => {
+        const checkAuthToken = () => {
+            const token = sessionStorage.getItem('Auth token');
+            if (token) {
+                setIsLoggedIn(true);
+            } else {
+                setIsLoggedIn(false);
+            }
+        }
+
+        window.addEventListener('storage', checkAuthToken);
+
+        return () => {
+            window.removeEventListener('storage', checkAuthToken);
+        }
+    }, [])
+
   return (
     <>
       <div className="md:rounded-3xl flex justify-between items-center">
@@ -14,9 +44,19 @@ const MobileNav = () => {
         </div>
 
         <div>
-          <button className="bg-lgreen pt-1 pb-1.5 px-3 rounded-xl md:rounded-2xl m-4 font-medium  text-white shadow-md ">
+        {
+           isLoggedIn ? 
+          <button className="bg-lgreen pt-2 pb-2.5 px-4 rounded-xl md:rounded-2xl m-4 font-medium hover:cursor-pointer text-white shadow-md "
+          onClick={handleLogout}>
+            Logout
+          </button> :
+          <Link to='/login'>
+            <button className="bg-lgreen pt-2 pb-2.5 px-4 rounded-xl md:rounded-2xl m-4 font-medium hover:cursor-pointer text-white shadow-md ">
             Login
           </button>
+          </Link> 
+          }
+          
         </div>
       </div>
     </>
@@ -24,6 +64,33 @@ const MobileNav = () => {
 };
 
 const LargeNav = () => {
+  const navigate = useNavigate();
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+    const handleLogout = () => {
+        sessionStorage.removeItem('Auth token');
+        sessionStorage.removeItem('User Id');
+        window.dispatchEvent(new Event("storage"))
+        navigate("/");
+    }
+
+    useEffect(() => {
+        const checkAuthToken = () => {
+            const token = sessionStorage.getItem('Auth token');
+            if (token) {
+                setIsLoggedIn(true);
+            } else {
+                setIsLoggedIn(false);
+            }
+        }
+
+        window.addEventListener('storage', checkAuthToken);
+
+        return () => {
+            window.removeEventListener('storage', checkAuthToken);
+        }
+    }, [])
+
   return (
     <>
       <div className="md:rounded-3xl flex justify-between w-full items-center">
@@ -40,7 +107,7 @@ const LargeNav = () => {
             <FiSearch />
           </div>
           <input
-            type="search"
+            type="text"
             className="w-full focus:outline-none mr-4"
             placeholder="Search for Restaurants and Food"
           ></input>
@@ -53,9 +120,27 @@ const LargeNav = () => {
         
         
         <div className="ml-1">
-          <button className="bg-lgreen pt-2 pb-2.5 px-4 rounded-xl md:rounded-2xl m-4 font-medium hover:cursor-pointer text-white shadow-md ">
+          {
+           isLoggedIn ? 
+          (
+            
+            <button className="bg-lgreen pt-2 pb-2.5 px-4 rounded-xl md:rounded-2xl m-4 font-medium hover:cursor-pointer text-white shadow-md "
+          onClick={handleLogout}>
+            Logout
+          </button>
+          )
+           :
+           (
+           
+            <Link to='/login'>
+            <button className="bg-lgreen pt-2 pb-2.5 px-4 rounded-xl md:rounded-2xl m-4 font-medium hover:cursor-pointer text-white shadow-md ">
             Login
           </button>
+          </Link> 
+           )
+          
+          }
+          
         </div>
       </div>
     </>
