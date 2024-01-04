@@ -10,8 +10,10 @@ import { About } from "./Components/About";
 import Register from "./Register/Register";
 import { Routes } from "react-router-dom";
 
-import { Route , BrowserRouter } from "react-router-dom";
+import { Route 
+ } from "react-router-dom";
 import { Footer } from "./Components/Footer";
+import { Rest } from "./Components/Rest"
 
 
 function App() {
@@ -25,6 +27,8 @@ function App() {
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path="/about" element={<About/>}/>
+        <Route path="/res/:id" element={<Rest/>}/>
+        
 
       </Routes>
       <Footer/>

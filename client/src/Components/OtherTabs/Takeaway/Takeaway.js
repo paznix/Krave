@@ -1,5 +1,6 @@
 import React from "react";
 import cardItems from "../../Cards/cardItems";
+import { Link } from "react-router-dom";
 
 const takeawayCards = () => {
     const renderCards = (card) => {
@@ -7,7 +8,8 @@ const takeawayCards = () => {
             <>
             
                 <div className=" mx-auto flex flex-col hover:cursor-pointer bg-white rounded-xl shadow-md md:shadow-xl md:w-96">
-                <div className="">
+              <Link to={`/res/${card.id}`}>  
+              <div className="">
                     <img src={card.image} alt={card.name} className="w-96 h-56 rounded-t-xl"/>
                 </div>
                 <div className="flex justify-between p-3">
@@ -20,9 +22,10 @@ const takeawayCards = () => {
                     </div>
                     
                 </div>
+                </Link>
             </div>
         
-                
+            
             </>
         );
     };

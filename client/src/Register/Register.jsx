@@ -52,7 +52,7 @@ const Register = () => {
                         progress: undefined,
                         theme: 'dark'
                         });
-                    navigate('/');
+                    navigate('/login');
                 } else {
                     console.log(response.json());
                 }
@@ -102,7 +102,7 @@ const Register = () => {
                         className="block appearance-none w-full px-3 py-2 border border-gray roundedn-md shadow-sm placeholder-gray focus:outline-none focus:ring-gray focus:border-gray"
                         />
                     </div>
-                    <Button size="large">{loading ? "loading" : 'Register'}</Button>
+                    <Button size="large">{loading ? "Loading..." : 'Register'}</Button>
                 </form>
                 <ToastContainer />
                 </div>
