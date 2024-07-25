@@ -25,7 +25,7 @@ const Foods = () => {
     {
       name: "Biryani",
       image:
-        "https://www.cookwithnabeela.com/wp-content/uploads/2023/09/ChickenBiryani.webp",
+        "https://thumbs.dreamstime.com/b/chicken-dum-biryani-white-bowl-traditional-indian-one-pot-dish-background-high-angle-view-156498926.jpg",
     },
     {
       name: "Cake",
